@@ -1,0 +1,35 @@
+version: '3.8'
+
+networks:
+  asgard:
+    name: asgard
+    driver: ipvlan
+    driver_opts:
+      parent: ens33
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1
+
+services:
+  container1:
+    container_name: container1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: printer-api-csv
+    networks:
+      asgard:
+        ipv4_address: 192.168.1.201
+    ports:
+      - 80:80
+
+  container2:
+    container_name: container2
+    image: printer-api-csv
+    networks:
+      asgard:
+        ipv4_address: 192.168.1.202
+    ports:
+      - 80:80

@@ -1,0 +1,9 @@
+1)
+docker build -t printer-api-csv .
+
+2)
+docker network create -d ipvlan --subnet=192.168.1.0/24 --gateway 192.168.1.1 -o parent=ens33 asgard
+
+3)
+docker run -itd -p 80:80 --network asgard --ip 192.168.1.201 --name container1 printer-api-csv
+docker run -itd -p 80:80 --network asgard --ip 192.168.1.202 --name container2 printer-api-csv
