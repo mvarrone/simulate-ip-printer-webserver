@@ -46,14 +46,15 @@ This feature was built to complement the [printer-monitoring project](https://gi
 
 ## Usage
 
-1. Clone this repository
+1. Install Docker and Docker Compose
+    ```md
+    sudo apt-get update && sudo apt-get install docker docker-compose -y
+    ```
+
+2. Clone this repository
 
     ```md
     git clone https://github.com/mvarrone/simulate-ip-printer-webserver.git && cd simulate-ip-printer-webserver
-    ```
-2. Install Docker and Docker Compose
-    ```md
-    sudo apt-get update && sudo apt-get install docker docker-compose -y
     ```
 3. Run Docker Compose
 
@@ -89,7 +90,7 @@ This feature was built to complement the [printer-monitoring project](https://gi
     }
     ```
 
-6. Now, you can use that other project with new hosts available to be tested
+6. You can now test the other project with the new available hosts
 
 ## Contributions
 
