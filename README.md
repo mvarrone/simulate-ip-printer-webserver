@@ -49,8 +49,7 @@ This feature was built to complement the [printer-monitoring project](https://gi
 1. Clone this repository
 
     ```md
-    git clone https://github.com/mvarrone/simulate-ip-printer-webserver.git
-    cd simulate-ip-printer-webserver
+    git clone https://github.com/mvarrone/simulate-ip-printer-webserver.git && cd simulate-ip-printer-webserver
     ```
 2. Install Docker and Docker Compose
     ```md
