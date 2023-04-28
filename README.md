@@ -74,10 +74,7 @@ This feature was built to complement the [printer-monitoring project](https://gi
     
     If working, you should see something like:
     ```md
-    {
-        'message': 'App is working',
-        'time': datetime string
-    } 
+    {"message":"App is working","time":"2023-04-28T06:41:52.060170"}
     ```
 
 5. Add data printer inside the `devices.json` file. It must be added in the format of Python 3 dictionaries
